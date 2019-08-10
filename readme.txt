@@ -1,5 +1,5 @@
-Proyecto 
+Proyecto
 
-Creacion de paguina web de prueba
-para saber la interaccion y 
-manipulacion de la plataforma git
+Creación de pagina web de prueba
+para saber la interacción y
+manipulación de la plataforma git
