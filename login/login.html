@@ -3,27 +3,67 @@
   <head>
     <meta charset="utf-8">
     <title>login</title>
+
+    <script type="text/javascript">
+      function ajax(parametro){
+        var login = new XMLHttpRequest();
+
+        login.onreadystatechange = function(){
+          if(login.readyState == 4 && login.status == 200){
+            document.getElementById("usario").innerHTML = login.responseText;
+            document.getElementById("clave").innerHTML = login.responseText;
+          }
+        }
+
+        login.open("POST", "login.php", false);
+        login.setRequestHeader("Content-Type", "application/x-wwww-form-urlencode");
+
+        login.send(parametro);
+      }
+    </script>
   </head>
   <body>
-    <form class="" action="index.html" method="post">
-      <table border="1">
-        <caption>register</caption>
-        <tr>
-            <th>user:</th>
-            <td>
-              <input type="text" name="user" value="" placeholder="user"/>
-            </td>
-        </tr>
-        <tr>
-          <th>password:</th>
-          <td>
-            <input type="password" name="password" value="" placeholder="password"/>
-          </td>
-        </tr>
-      </table>
-      <footer>
-        Publicado
-      </footer>
-    </form>
+  <!-- <form class="" method="post"> -->
+      <div class="" style="
+      padding-top: 15%;
+      padding-left: 25%;
+      padding-right: 25%;">
+        <div class=""
+        style="
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+        position:relative;
+        border: 1px solid #369;
+        text-align:center;">
+          <table>
+            <caption>Inicio de Sessión</caption>
+            <tr>
+                <th>Usuario:</th>
+                <td>
+                  <input type="text" id="usuario" name="user" value="" placeholder="user" required/>
+                </td>
+            </tr>
+            <tr>
+              <th>Clave:</th>
+              <td>
+                <input type="password" id="clave" name="password" value="" placeholder="password" required/>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <input type="button" name="" value="confirmar"
+                onclick= "
+                  var parametro = '';
+                  parametro = 'usuario =' + document.getElementById('usuario').value
+                  + 'clave =' + document.getElementById('clave').value;
+                  ajax(parametro);
+                "/>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    <!-- </form> -->
   </body>
 </html>
