@@ -2,68 +2,61 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>login</title>
+    <link rel=StyleSheet href="../css/login.css"/>
 
     <script type="text/javascript">
-      function ajax(parametro){
-        var login = new XMLHttpRequest();
+  		function ajax(url,parametro,mensaje)
+  		{
+  			var xmlhttp = new XMLHttpRequest();
+  			xmlhttp.onreadystatechange = function()
+  			{
+  				if (xmlhttp.readyState ==4 && xmlhttp.status ==200)
+  				{
+  					var contenido = xmlhttp.responseText;
+  					var datos = contenido.split(';');
+  					if (datos[0]=='[OK]')
+  					{
+  						window.location.href=datos[2];
+  					}
+  					var omensaje = document.getElementById(mensaje);
+  					omensaje.innerHTML = contenido;
+  				}
+  			}
+  			xmlhttp.open("POST",url,true);
+  			xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  			xmlhttp.send(parametro);
+  		}
+  	</script>
 
-        login.onreadystatechange = function(){
-          if(login.readyState == 4 && login.status == 200){
-            document.getElementById("usario").innerHTML = login.responseText;
-            document.getElementById("clave").innerHTML = login.responseText;
-          }
-        }
-
-        login.open("POST", "login.php", false);
-        login.setRequestHeader("Content-Type", "application/x-wwww-form-urlencode");
-
-        login.send(parametro);
-      }
-    </script>
   </head>
   <body>
-  <!-- <form class="" method="post"> -->
-      <div class="" style="
-      padding-top: 15%;
-      padding-left: 25%;
-      padding-right: 25%;">
-        <div class=""
-        style="
-        margin: 0 auto;
-        justify-content: center;
-        display: flex;
-        position:relative;
-        border: 1px solid #369;
-        text-align:center;">
-          <table>
+      <div class="login">
+          <table class="tabla">
             <caption>Inicio de Sessión</caption>
             <tr>
                 <th>Usuario:</th>
                 <td>
-                  <input type="text" id="usuario" name="user" value="" placeholder="user" required/>
+                  <input type="text" id="usuario" class="user" placeholder="user" required/>
                 </td>
             </tr>
             <tr>
               <th>Clave:</th>
               <td>
-                <input type="password" id="clave" name="password" value="" placeholder="password" required/>
+                <input type="password" id="clave" class="password" placeholder="password" required/>
               </td>
             </tr>
             <tr>
               <td colspan="2" align="center">
-                <input type="button" name="" value="confirmar"
-                onclick= "
-                  var parametro = '';
-                  parametro = 'usuario =' + document.getElementById('usuario').value
-                  + 'clave =' + document.getElementById('clave').value;
-                  ajax(parametro);
-                "/>
+                <button class="confirmar"
+      						onclick=
+                  "var parametro='';
+                  parametro='usuario='+document.getElementById('usuario').value+'&clave='+document.getElementById('clave').value;
+                  ajax('login.php',parametro,'mensaje');"
+      						>Iniciar Sesión</button>
               </td>
             </tr>
           </table>
-        </div>
       </div>
-    <!-- </form> -->
+      <nav id='mensaje' class="mensaje"></nav>
   </body>
 </html>
