@@ -34,15 +34,15 @@
           <table class="tabla">
             <caption>Inicio de Sessión</caption>
             <tr>
-                <th>Usuario:</th>
+                <th>Correo:</th>
                 <td>
-                  <input type="text" id="usuario" class="user" placeholder="user" required/>
+                  <input type="text" id="correo" class="correo" placeholder="correo" required/>
                 </td>
             </tr>
             <tr>
               <th>Clave:</th>
               <td>
-                <input type="password" id="clave" class="password" placeholder="password" required/>
+                <input type="password" id="clave" class="clave" placeholder="clave" required/>
               </td>
             </tr>
             <tr>
@@ -50,7 +50,7 @@
                 <button class="confirmar"
       						onclick=
                   "var parametro='';
-                  parametro='usuario='+document.getElementById('usuario').value+'&clave='+document.getElementById('clave').value;
+                  parametro='correo='+document.getElementById('correo').value+'&clave='+document.getElementById('clave').value;
                   ajax('login.php',parametro,'mensaje');"
       						>Iniciar Sesión</button>
               </td>

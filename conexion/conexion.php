@@ -1,7 +1,7 @@
 <?php
   function conectar(){
       $usuario = "root";
-      $contrasena = "proyecto";
+      $contrasena = "Admin123*";
       $servidor = "localhost";
       $base = "DB_RETO";
 

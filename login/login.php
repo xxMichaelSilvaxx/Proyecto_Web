@@ -3,15 +3,15 @@
 
   $db = conectar();
 
-  if (isset($_POST['usuario']) && isset($_POST['clave'])){
-    $usuario = $_POST['usuario'];
+  if (isset($_POST['correo']) && isset($_POST['clave'])){
+    $correo = $_POST['correo'];
     $clave = $_POST['clave'];
 
-    $resultado = $db->query("select clave, usuario from inicio_session where usuario='$usuario'");
+    $resultado = $db->query("select correo, clave from usuario where correo='$correo'");
      if ($resultado){
       if($fila = mysqli_fetch_assoc($resultado)){
         if ($fila['clave'] == $clave){
-          echo '[OK];'.$fila['usuario'].';../menu/index.html';
+          echo '[OK];'.$fila['correo'].';../menu/index.php';
         } else{
           echo '[ERROR] Contraseña incorrecta.';
         }

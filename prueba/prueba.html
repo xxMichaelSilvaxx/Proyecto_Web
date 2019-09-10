@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel='stylesheet' href='prueba.css'>
+    <script type="text/javascript">
+
+function muestra_oculta(id){
+if (document.getElementById){ //se obtiene el id
+var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
+el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+}
+}
+window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
+muestra_oculta('contenido');/* "contenido_a_mostrar" es el nombre que le dimos al DIV */
+}
+    </script>
+  </head>
+  <body>
+<div class="intento">
+  <nav>
+  	<a href="#">Home</a>
+  	<a href="#">About</a>
+  	<a href="#">Blog</a>
+  	<a href="#">Portefolio</a>
+  	<a href="#">Contact</a>
+	<a href="#">Home</a>
+  	<div class="animation start-home"></div>
+  </nav>
+
+  <h1>soy el mejor</h1>
+
+</div>
+
+<div class="titulo_boton">
+    Información adicional
+  <a style='cursor: pointer;' onClick="muestra_oculta('contenido')" title="" class="boton_mostrar">Mostrar / Ocultar</a>
+</div>
+
+<div id="contenido">
+<p>Aquí va el contenido a mostrar<br><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing </p>
+</div>
+
+
+<p>
+  By <span>Patak</span>
+</p>
+
+  </body>
+</html>
