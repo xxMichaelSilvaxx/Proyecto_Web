@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang='en' dir='ltr'>
+      <head>
+        <meta charset='utf-8'>
+        <title></title>
+        <link rel='stylesheet' href='../css/principal.css'>
+        <script type="text/javascript" src="../script/ocultar.js"></script>
+        <script type="text/javascript">
+      		function ajax(url,parametro,mensaje)
+      		{
+      			var xmlhttp = new XMLHttpRequest();
+      			xmlhttp.onreadystatechange = function()
+      			{
+      				if (xmlhttp.readyState ==4 && xmlhttp.status ==200)
+      				{
+      					var contenido = xmlhttp.responseText;
+      					var datos = contenido.split(';');
+      					if (datos[0]=='[OK]')
+      					{
+      						window.location.href=datos[2];
+      					}
+      					var omensaje = document.getElementById(mensaje);
+      					omensaje.innerHTML = contenido;
+      				}
+      			}
+      			xmlhttp.open("POST",url,true);
+      			xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      			xmlhttp.send(parametro);
+      		}
+      	</script>
+      </head>
+      <body>
+      <br/><br/>
+        <div class='navegacion'>
+          <h1>Zapateria Menoscal</h1>
+          <div class='opciones'>
+          	<a href='principal.html'>Inicio</a>
+          	<a href='#'>Productos</a>
+          	<a href='#'>Usuarios</a>
+          	<a href='#'>Acerca de</a>
+          	<div class='animation start-home'></div>
+          </div>
+        </div>
+        <br/><br/>
+        <div class="espacio">
+
+        </div>
+        <br/><br/>
+        <div class="cuerpo" id="cuerpo">
+
+        </div>
+        <footer>
+
+        </footer>
+      </body>
+    </html>

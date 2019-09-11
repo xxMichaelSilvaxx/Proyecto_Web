@@ -11,7 +11,7 @@
      if ($resultado){
       if($fila = mysqli_fetch_assoc($resultado)){
         if ($fila['clave'] == $clave){
-          echo '[OK];'.$fila['correo'].';../menu/index.php';
+          echo '[OK];'.$fila['correo'].';../menu/principal.html';
         } else{
           echo '[ERROR] Contraseña incorrecta.';
         }
