@@ -5,21 +5,29 @@
         <title></title>
         <link rel='stylesheet' href='../css/principal.css'>
         <script type="text/javascript" src="../script/script.js"></script>
+        <script type="text/javascript" src="../script/google_jquery.js"></script>
+
+        <script type="text/javascript">
+        function cargar(id, url){
+          $(id).load(url);
+        }
+        </script>
       </head>
       <body>
       <br/><br/>
 
         <div class='navegacion'>
           <h1>Zapateria Menoscal</h1>
-            <div class='opciones'>
-            	<a href='principal.html'>Inicio</a>
-            	<a href='#'>Productos</a>
-            	<a href='#'>Usuarios</a>
-            	<a href='#'>Acerca de</a>
-            	<div class='animation start-home'></div>
-            </div>
+          <div class='opciones'>
+            <a href='principal.html'>Inicio</a>
+            <a id="producto" onclick="cargar('cuerpo', '../producto/producto.php');">Productos</a>
+            <a href='../usuario/usuario.php'>Usuarios</a>
+            <a href='../acerca/acerca_de.php'>Acerca de</a>
+            <div class='animation start-home'></div>
+          </div>
             <div class="registro">
-              <table class="tabla">
+              <button class="confirmar">Usuario</button>
+              <!-- <table class="tabla">
                   <td>
                     <input type="text" id="correo" class="correo" placeholder="correo" required/>
                   </td>
@@ -30,7 +38,7 @@
                     <button class="confirmar">Iniciar</button>
                   </td>
                 </tr>
-              </table>
+              </table> -->
             </div>
           </div>
         <br/><br/>
@@ -39,64 +47,6 @@
         </div>
         <br/><br/>
         <div class="cuerpo" id="cuerpo">
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
-          <span>XD</span>
-          <br/><br/>
           <span>XD</span>
         </div>
         <footer>
