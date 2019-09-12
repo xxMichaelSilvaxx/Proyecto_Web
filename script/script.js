@@ -1,12 +1,12 @@
-function ocultar(id){
-  if (document.getElementById){
-      var page = document.getElementById(id);
-      page.style.display = (page.style.display == 'none') ? 'block' : 'none';
-    }
-  }
-  window.onload = function(){
-  ocultar('contenido');
-}
+// function ocultar(id){
+//   if (document.getElementById){
+//       var page = document.getElementById(id);
+//       page.style.display = (page.style.display == 'none') ? 'block' : 'none';
+//     }
+//   }
+//   window.onload = function(){
+//   ocultar('contenido');
+// }
 
 $(function(){
   var windowHeight = $(window).height();//tamaño de la ventana

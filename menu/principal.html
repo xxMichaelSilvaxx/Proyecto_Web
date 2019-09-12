@@ -4,53 +4,57 @@
         <meta charset='utf-8'>
         <title></title>
         <link rel='stylesheet' href='../css/principal.css'>
-        <script type="text/javascript" src="../script/script.js"></script>
-        <script type="text/javascript" src="../script/google_jquery.js"></script>
-
-        <script type="text/javascript">
-        function cargar(id, url){
-          $(id).load(url);
-        }
-        </script>
+        <script type='text/javascript' src="../script/jquery_google.js"></script>
+          <script type="text/javascript">
+            function cargar(id, url){
+              $(document).ready(function() {
+                $("#"+id).click(function(event) {
+                  $("#cuerpo").load(url);
+                });
+              });
+            }
+      </script>
       </head>
       <body>
       <br/><br/>
-
         <div class='navegacion'>
           <h1>Zapateria Menoscal</h1>
           <div class='opciones'>
             <a href='principal.html'>Inicio</a>
-            <a id="producto" onclick="cargar('cuerpo', '../producto/producto.php');">Productos</a>
-            <a href='../usuario/usuario.php'>Usuarios</a>
-            <a href='../acerca/acerca_de.php'>Acerca de</a>
+            <a id="producto" onmousedown="cargar('producto', '../producto/producto.php');">Productos</a>
+            <a id="usuario" onmousedown="cargar('usuario', '../usuario/usuario.php');">Usuarios</a>
+            <a id="acerca" onmousedown="cargar('acerca', '../acerca/acerca_de.php');">Acerca de</a>
             <div class='animation start-home'></div>
           </div>
+          <div class="">
+            <button  class="usuario">Usuario</button>
+          </div>
             <div class="registro">
-              <button class="confirmar">Usuario</button>
-              <!-- <table class="tabla">
+              <table class="tabla">
                   <td>
                     <input type="text" id="correo" class="correo" placeholder="correo" required/>
-                  </td>
+                  </td></tr>
+                  <tr>
                   <td>
                     <input type="password" id="clave" class="clave" placeholder="clave" required/>
                   </td>
-                  <td colspan="2">
-                    <button class="confirmar">Iniciar</button>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="iniciar">Iniciar</button>
+                  </td>
+                  <td>
+                    <button class="registrar">Registrarse</button>
                   </td>
                 </tr>
-              </table> -->
+              </table>
             </div>
           </div>
         <br/><br/>
         <div class="espacio">
-
         </div>
         <br/><br/>
         <div class="cuerpo" id="cuerpo">
-          <span>XD</span>
         </div>
-        <footer>
-
-        </footer>
       </body>
     </html>
