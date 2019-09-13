@@ -1,16 +1,16 @@
 <?php
 class Conexion{
 
-  // private $usuario = "root";
-  // private $contrasena = "proyecto";
-  // private $servidor = "localhost";
-  // private $base = "DB_RETO";
+  private $usuario;
+  private $contrasena;
+  private $servidor;
+  private $base;
 
-  private $conexion;
+  protected $conexion;
 
   public function conectar(){
     $usuario = "root";
-    $contrasena = "proyecto";
+    $contrasena = "Admin123*";
     $servidor = "localhost";
     $base = "DB_RETO";
     $conexion = mysqli_connect($servidor, $usuario, $contrasena, $base) or die ("SIN CONEXION");
@@ -22,5 +22,10 @@ class Conexion{
         mysqli_close($this->$conexion);
       }
   }
+
+  public function call_query($query){
+    return $this->conectar()->query($query);
+  }
+  
 }
 ?>

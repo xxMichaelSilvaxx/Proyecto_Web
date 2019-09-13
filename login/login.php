@@ -6,8 +6,9 @@
   if (isset($_POST['correo']) && isset($_POST['clave'])){
     $correo = $_POST['correo'];
     $clave = $_POST['clave'];
+    $query = "select correo, clave from usuario where correo='$correo'";
 
-    $resultado = $conectar->conectar()->query("select correo, clave from usuario where correo='$correo'");
+    $resultado = $conectar->call_query($query);
      if ($resultado){
       if($fila = mysqli_fetch_assoc($resultado)){
         if ($fila['clave'] == $clave){
@@ -19,6 +20,6 @@
      		echo "[ERROR] Usuario no existe.";
     	}
   	}
-   // $conectar->deconectar();
+   $conectar->conectar()->close();
   }
 ?>
