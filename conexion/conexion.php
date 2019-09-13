@@ -1,12 +1,26 @@
 <?php
-  function conectar(){
-      $usuario = "root";
-      $contrasena = "Admin123*";
-      $servidor = "localhost";
-      $base = "DB_RETO";
+class Conexion{
 
-      $conexion = mysqli_connect($servidor, $usuario, $contrasena, $base) or die ("SIN CONEXION");
+  // private $usuario = "root";
+  // private $contrasena = "proyecto";
+  // private $servidor = "localhost";
+  // private $base = "DB_RETO";
 
-      return $conexion;
-    }
+  private $conexion;
+
+  public function conectar(){
+    $usuario = "root";
+    $contrasena = "proyecto";
+    $servidor = "localhost";
+    $base = "DB_RETO";
+    $conexion = mysqli_connect($servidor, $usuario, $contrasena, $base) or die ("SIN CONEXION");
+    return $conexion;
+  }
+
+  public function desconectar(){
+      if($this->conectar->conexion){
+        mysqli_close($this->$conexion);
+      }
+  }
+}
 ?>
