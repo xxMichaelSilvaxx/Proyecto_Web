@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel=StyleSheet href="../css/login.css"/>
 
-    <script type="text/javascript">
-  		function ajax(url,parametro,mensaje)
-  		{
-  			var xmlhttp = new XMLHttpRequest();
-  			xmlhttp.onreadystatechange = function()
-  			{
-  				if (xmlhttp.readyState ==4 && xmlhttp.status ==200)
-  				{
-  					var contenido = xmlhttp.responseText;
-  					var datos = contenido.split(';');
-  					if (datos[0]=='[OK]')
-  					{
-  						window.location.href=datos[2];
-  					}
-  					var omensaje = document.getElementById(mensaje);
-  					omensaje.innerHTML = contenido;
-  				}
-  			}
-  			xmlhttp.open("POST",url,true);
-  			xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  			xmlhttp.send(parametro);
-  		}
-  	</script>
+<head>
+  <meta charset="utf-8">
+  <link rel=StyleSheet href="../css/login.css" />
 
-  </head>
-  <body>
-      <div class="login">
-          <table class="tabla">
-            <caption>Inicio de Sessión</caption>
-            <tr>
-                <th>Correo:</th>
-                <td>
-                  <input type="text" id="correo" class="correo" placeholder="correo" required/>
-                </td>
-            </tr>
-            <tr>
-              <th>Clave:</th>
-              <td>
-                <input type="password" id="clave" class="clave" placeholder="clave" required/>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" align="center">
-                <button class="confirmar"
-      						onclick=
-                  "var parametro='';
+  <script type="text/javascript">
+    function ajax(url, parametro, mensaje) {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          var contenido = xmlhttp.responseText;
+          var datos = contenido.split(';');
+          if (datos[0] == '[OK]') {
+            window.location.href = datos[2];
+          }
+          var omensaje = document.getElementById(mensaje);
+          omensaje.innerHTML = contenido;
+        }
+      }
+      xmlhttp.open("POST", url, true);
+      xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xmlhttp.send(parametro);
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="login">
+    <table class="tabla">
+      <caption>Inicio de Sessión</caption>
+      <tr>
+        <th>Correo:</th>
+        <td>
+          <input type="text" id="correo" class="correo" placeholder="correo" required />
+        </td>
+      </tr>
+      <tr>
+        <th>Clave:</th>
+        <td>
+          <input type="password" id="clave" class="clave" placeholder="clave" required />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <button class="confirmar" onclick="var parametro='';
                   parametro='correo='+document.getElementById('correo').value+'&clave='+document.getElementById('clave').value;
-                  ajax('login.php',parametro,'mensaje');"
-      						>Iniciar Sesión</button>
-              </td>
-            </tr>
-          </table>
-      </div>
-      <nav id='mensaje' class="mensaje"></nav>
-  </body>
+                  ajax('login.php',parametro,'mensaje');">Iniciar Sesión</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <nav id='mensaje' class="mensaje"></nav>
+</body>
+
 </html>

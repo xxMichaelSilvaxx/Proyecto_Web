@@ -10,7 +10,7 @@ class Conexion{
 
   public function conectar(){
     $usuario = "root";
-    $contrasena = "Admin123*";
+    $contrasena = "proyecto";
     $servidor = "localhost";
     $base = "DB_RETO";
     $conexion = mysqli_connect($servidor, $usuario, $contrasena, $base) or die ("SIN CONEXION");
@@ -26,6 +26,6 @@ class Conexion{
   public function call_query($query){
     return $this->conectar()->query($query);
   }
-  
+
 }
 ?>

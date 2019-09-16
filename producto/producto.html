@@ -1,0 +1,28 @@
+<section>
+  <nav id="consultar">
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th></th>
+        <th>Descripcion</th>
+      </tr>
+      <tr>
+        <td><span>hola</span></td>
+        <td><span>hola</span></td>
+        <td><span>hola</span></td>
+      </tr>
+    </table>
+  </nav>
+  <nav>
+    <button id="crear" onmousedown="cargar('crear', 'producto.php' , 'nav');">Crear</button>
+    <button id="actualizar" onmousedown="cargar('actualizar', 'producto.php' , 'nav');">Actualizar</button>
+    <button id="eliminar" onmousedown="cargar('eliminar', '../acerca/acerca_de.php' , 'nav');">Eliminar</button>
+    <br />
+    <form action="../img/img.php" method="post" enctype="multipart/form-data" name="inscripcion">
+      <input type="file" name="archivo[]" multiple="multiple">
+      <input type="submit" value="Enviar" class="trig">
+    </form>
+  </nav>
+  <nav id="nav">
+  </nav>
+</section>

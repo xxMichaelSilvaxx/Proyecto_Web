@@ -1,60 +1,66 @@
 <!DOCTYPE html>
-    <html lang='en' dir='ltr'>
-      <head>
-        <meta charset='utf-8'>
-        <title></title>
-        <link rel='stylesheet' href='../css/principal.css'>
-        <script type='text/javascript' src="../script/jquery_google.js"></script>
-          <script type="text/javascript">
-            function cargar(id, url){
-              $(document).ready(function() {
-                $("#"+id).click(function(event) {
-                  $("#cuerpo").load(url);
-                });
-              });
-            }
-      </script>
-      </head>
-      <body>
-      <br/><br/>
-        <div class='navegacion'>
-          <h1>Zapateria Menoscal</h1>
-          <div class='opciones'>
-            <a href='principal.html'>Inicio</a>
-            <a id="producto" onmousedown="cargar('producto', '../producto/producto.php');">Productos</a>
-            <a id="usuario" onmousedown="cargar('usuario', '../usuario/usuario.php');">Usuarios</a>
-            <a id="acerca" onmousedown="cargar('acerca', '../acerca/acerca_de.php');">Acerca de</a>
-            <div class='animation start-home'></div>
-          </div>
-          <div class="">
-            <button  class="usuario">Usuario</button>
-          </div>
-            <nav class="registro">
-              <table class="tabla">
-                  <td>
-                    <input type="text" id="correo" class="correo" placeholder="correo" required/>
-                  </td></tr>
-                  <tr>
-                  <td>
-                    <input type="password" id="clave" class="clave" placeholder="clave" required/>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <button class="iniciar">Iniciar</button>
-                  </td>
-                  <td>
-                    <button class="registrar">Registrarse</button>
-                  </td>
-                </tr>
-              </table>
-            </nav>
-          </div>
-        <br/><br/>
-        <div class="espacio">
-        </div>
-        <br/><br/>
-        <div class="cuerpo" id="cuerpo">
-        </div>
-      </body>
-    </html>
+<html lang='en' dir='ltr'>
+
+<head>
+  <meta charset='utf-8'>
+  <title></title>
+  <link rel='stylesheet' href='../css/principal.css'>
+  <script type='text/javascript' src="../script/jquery_google.js"></script>
+  <script type="text/javascript">
+    function cargar(id, url, obj) {
+      $(document).ready(function() {
+        $("#" + id).click(function(event) {
+          $("#" + obj).load(url);
+        });
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div class='navegacion'>
+    <div class="encabezado">
+      <h1>Zapateria Menoscal</h1>
+    </div>
+    <div class='opciones'>
+      <a href='principal.html'>Inicio</a>
+      <a id="producto" onmousedown="cargar('producto', '../producto/producto.html', 'cuerpo');">Productos</a>
+      <a id="usuario" onmousedown="cargar('usuario', '../usuario/usuario.php', 'cuerpo');">Usuarios</a>
+      <a id="acerca" onmousedown="cargar('acerca', '../acerca/acerca_de.php', 'cuerpo');">Acerca de</a>
+      <div class='animation start-home'></div>
+    </div>
+    <nav class="registro">
+      <div class="usuario_habilitador">
+        <button class="usuario">Usuario</button>
+      </div>
+      <div class="login">
+        <table class="tabla">
+          <td>
+            <input type="text" id="correo" class="correo" placeholder="correo" required />
+          </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="password" id="clave" class="clave" placeholder="clave" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="iniciar">Iniciar</button>
+            </td>
+            <td>
+              <button class="registrar">Registrarse</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </nav>
+  </div>
+  <div class="espacio">
+    <input type="text" name="buscar" placeholder="buscar"/>
+  </div>
+  <div class="cuerpo" id="cuerpo">
+  </div>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 
 $empresa =
 "
-<span>XDDDDDDDDDDDDDDDDDD</span>
+<span>Acerca de</span>
 ";
 
 echo $empresa;
