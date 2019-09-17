@@ -9,8 +9,8 @@ $carpetaDestino='img/';
           $origen=$_FILES['archivo']['tmp_name'][$i];
           $destino=$carpetaDestino.$_FILES['archivo']['name'][$i];
           if(@move_uploaded_file($origen, $destino)){
-            // echo '<br>'.$_FILES['archivo']['name'][$i].' movido correctamente';
-            var_dump(__FILE__.$carpetaDestino.$_FILES['archivo']['name'][$i]);
+            echo '<br>'.$_FILES['archivo']['name'][$i].' movido correctamente';
+            // var_dump(__FILE__.$carpetaDestino.$_FILES['archivo']['name'][$i]);
           }else{
             echo '<br>No se ha podido mover el archivo: '.$_FILES['archivo']['name'][$i];
           }
