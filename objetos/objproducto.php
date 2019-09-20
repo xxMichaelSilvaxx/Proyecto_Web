@@ -5,12 +5,12 @@ class Producto
   private $id_modelo;
   private $imagen;
   private $codigo;
-  private $nombre;
+  public $nombre;
   private $descripcion;
   private $color;
   private $estado;
 
-  function __construct()
+  public function __construct()
   {
 
   }

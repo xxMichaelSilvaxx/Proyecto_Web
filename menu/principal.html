@@ -5,12 +5,14 @@
   <meta charset='utf-8'>
   <title></title>
   <link rel='stylesheet' href='../css/principal.css'>
+  <link rel='stylesheet' href='../css/producto.css'>
   <script type='text/javascript' src="../script/jquery_google.js"></script>
+  <!-- <script type='text/javascript' src="../script/script.js"></script> -->
   <script type="text/javascript">
-    function cargar(id, url, obj) {
+    function cargar(id, url, contenedor) {
       $(document).ready(function() {
         $("#" + id).click(function(event) {
-          $("#" + obj).load(url);
+          $("#" + contenedor).load(url);
         });
       });
     }
@@ -24,7 +26,7 @@
     </div>
     <div class='opciones'>
       <a href='principal.html'>Inicio</a>
-      <a id="producto" onmousedown="cargar('producto', '../producto/producto.html', 'cuerpo');">Productos</a>
+      <a id="producto" onmousedown="cargar('producto', '../producto/consulta_producto_views.php', 'cuerpo');">Productos</a>
       <a id="usuario" onmousedown="cargar('usuario', '../usuario/usuario.php', 'cuerpo');">Usuarios</a>
       <a id="acerca" onmousedown="cargar('acerca', '../acerca/acerca_de.php', 'cuerpo');">Acerca de</a>
       <div class='animation start-home'></div>
@@ -57,48 +59,16 @@
     </nav>
   </div>
   <div class="espacio">
+    <marquee style="border:blue 3px SOLID" bgcolor="#6495ED" direction="left">
+      <span>BIENVENIDOS</span>
+    </marquee>
+    <br/>
+    <br/>
     <input type="text" name="buscar" placeholder="buscar" />
   </div>
   <div class="cuerpo" id="cuerpo">
-    <div id="texto1">
-      <div>
-        <h1>MISIÓN </h1>
-        <p1>
-          Es una micro-empresa dedicada a la fabricación y venta
-          de calzado, para caballeros y niños de todas las edades.
-          Nuestro compromiso es satisfacer las necesidades
-          de nuestros clientes, ofreciendo productos de calidad, a precios justos, con las mejores
-          condiciones de pago y excelente servicio de atención de su dueño y empleados
-          dentro de la filosofía del mejoramientos continuo.
-        </p1>
-
-      </div>
-      <div id="texto2">
-        <span>VISIÓN</span>
-        <p>Calzados Menoscal es convertirnos en la micro-Empresa líder en la
-          elaboración de calzado en la ciudad de Guayaquil,
-          ofreciendo productos innovadores y de buena
-          calidad contando con un equipo humano de gran
-          desempeño y productividad dispuestos a brindar
-          calidad en los procesos y productos para
-          las necesidades de nuestros clientes contribuyendo
-          así con el desarrollo social de mi región.</p>
-
-      </div>
-      <div id="texto3">
-        <span>DIRECCIÓN</span>
-        <p>Coop. Guerrero del Fortín Mz:1170-Solar 17</p>
-      </div>
-      <div id="texto4">
-        <span>Correo</span>
-        <p> enriquemenoscalpinto@gmail.com</p>
-
-      </div>
-      <div id="texto5">
-        <span>Telefonos</span>
-        <p>Celular: 0988997653</p>
-        <p> Convencional: 3067356</p>
-      </div>
+    <!-- <?php include file = "../producto/consulta_producto_views.php" ?> -->
+  </div>
 </body>
 
 </html>

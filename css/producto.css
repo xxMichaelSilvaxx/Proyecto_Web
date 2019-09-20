@@ -1,0 +1,9 @@
+.descripcion {
+  width: 270px;
+  height: 100px;
+  border: 1px dotted #000099;
+  resize: none;
+  font-family: sans-serif, verdana;
+  font-size: 12pt;
+  letter-spacing: 1px;
+}
