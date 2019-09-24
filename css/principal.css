@@ -1,11 +1,11 @@
-body{
+body {
   background-color: #d7ebe7;
   top: 0;
   left: 0;
   right: 0;
 }
 
-.navegacion{
+.navegacion {
   position: fixed;
   background: #000000;
   z-index: 2;
@@ -17,54 +17,61 @@ body{
 }
 
 .encabezado {
-	text-align: center;
+  text-align: center;
   width: 350px;
   font-size: 15px;
-	color: #414141;
-	margin: 0 auto;
+  color: #414141;
+  margin: 0 auto;
 }
 
 .opciones {
   margin: 0 auto;
-	width: 440px;
-	height: 50px;
+  width: 440px;
+  height: 50px;
   border-radius: 10px;
-	background-color: rgb(135, 135, 135);
-	font-size: 0;
+  background-color: rgb(135, 135, 135);
+  font-size: 0;
 }
+
 .opciones a {
-	line-height: 50px;
-	height: 100%;
-	font-size: 15px;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
-	color: rgb(255, 255, 255);
-	cursor: pointer;
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
+
 .opciones .animation {
-	position: absolute;
-	height: 100%;
-	top: 0;
-	z-index: 0;
-	transition: all .6s ease 0s;
-	border-radius: 8px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  transition: all .6s ease 0s;
+  border-radius: 8px;
 }
+
 .opciones a:nth-child(1) {
-	width: 90px;
+  width: 90px;
 }
+
 .opciones a:nth-child(2) {
-	width: 120px;
+  width: 120px;
 }
+
 .opciones a:nth-child(3) {
-	width: 110px;
+  width: 110px;
 }
+
 .opciones a:nth-child(4) {
-	width: 120px;
+  width: 120px;
 }
+
 /*
 .opciones .start-home, a:nth-child(1):hover~.animation {
 	width: 90px;
@@ -92,11 +99,11 @@ body{
 	left: 442px;
 	background-color: #9b59b6;
 } */
-
-.registro{
+.registro {
   margin: 30px auto 30px 500px;
   border-radius: 30px;
 }
+
 /*
 .registro table td{
   font-size: 15px;
@@ -105,7 +112,6 @@ body{
   color:#ffffff;
   font-size: 10px;
 } */
-
 /* .correo, .clave{
   font-size: 12px;
   padding-top: 8px;
@@ -115,7 +121,6 @@ body{
   width: 90px;
   border-radius: 0;
 } */
-
 /* .confirmar{
   padding-top: 5px;
   padding-bottom: 5px;
@@ -127,16 +132,55 @@ body{
   border-radius: 5px;
   text-transform: uppercase;
 } */
-
-.espacio{
+.espacio {
   text-align: center;
-  margin: 150px auto ;
+  margin: 150px auto;
 }
 
-.registro{
+.registro {
   display: none;
 }
 
-.cuerpo{
+.cuerpo {
   margin-top: 20px;
+  width: 100%;
+}
+
+.consultar{
+  width: 50%;
+}
+
+.consultar table {
+  width: 50%;
+}
+
+.consultar td, th {
+  border: 1px SOLID rgb(85, 0, 5);
+  padding: 1px 2px 1px 2px;
+  margin: 2px 1px 2px 1px;
+  font-size: 20px;
+}
+
+.img_producto {
+  height: 200px;
+  width: 400px;
+}
+
+.button_producto {
+  height: 100px;
+  width: 200px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline:none;
+  color: rgb(255, 18, 18);
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.td_button_producto{
+  width: 10%;
+  resize: none;
 }

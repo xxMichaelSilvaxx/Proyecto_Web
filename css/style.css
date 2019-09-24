@@ -1,0 +1,7 @@
+header{
+  background: linear-gradient(to right, rgb(0, 11, 56) 40%, rgb(0, 0, 0));
+}
+
+.navbar a{
+  color: rgb(255, 255, 255);
+}

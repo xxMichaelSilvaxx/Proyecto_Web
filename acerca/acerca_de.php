@@ -1,8 +1,7 @@
-<?php
+<?php  require ("../menu/header.php")?>
 
-  $empresa =
-  "
-    <div id=ubicaciontexto1'>
+
+    <div id="texto1" align="justify" class="text-center" style="font-size: 20px;">
       <span>MISIÓN </span>
       <p>
         Es una micro-empresa dedicada a la fabricación y venta
@@ -12,9 +11,13 @@
         condiciones de pago y excelente servicio de atención de su dueño y empleados
         dentro de la filosofía del mejoramientos continuo.
       </p>
-
     </div>
-    <div id='texto2'>
+    <br/>
+    <div>
+      <img src="../util/pac-man.png" alt="" width="100%" height="300"/>
+    </div>
+    <br/>
+    <div id="texto2" align="justify" class="text-center" style="font-size: 20px;">
       <span>VISIÓN</span>
       <p>
         Calzados Menoscal es convertirnos en la micro-Empresa líder en la
@@ -28,21 +31,21 @@
       </p>
 
     </div>
-    <div id='texto3'>
+    <br/>
+    <div id="texto3" align="justify" class="text-center" style="font-size: 20px;">
       <span>DIRECCIÓN</span>
       <p>Coop. Guerrero del Fortín Mz:1170-Solar 17</p>
     </div>
-    <div id='texto4'>
+    <div id="texto4" align="justify" class="text-center" style="font-size: 20px;">
       <span>Correo</span>
       <p> enriquemenoscalpinto@gmail.com</p>
 
     </div>
-    <div id='texto5'>
+    <div id="texto5" align="justify" class="text-center" style="font-size: 20px;">
       <span>Telefonos</span>
       <p>Celular: 0988997653</p>
       <p> Convencional: 3067356</p>
     </div>
-  ";
 
-  echo $empresa;
-?>
+
+<?php  require ("../menu/footer.php")?>

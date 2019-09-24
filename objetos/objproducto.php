@@ -8,6 +8,7 @@ class Producto
   public $nombre;
   private $descripcion;
   private $color;
+  private $precio;
   private $estado;
 
   public function __construct()
@@ -83,6 +84,16 @@ class Producto
   public function setColor($color)
   {
     $this->color = $color;
+  }
+
+  public function getPrecio()
+  {
+    return $this->precio;
+  }
+
+  public function setPrecio($precio)
+  {
+    $this->precio = $precio;
   }
 
   public function getEstado()
